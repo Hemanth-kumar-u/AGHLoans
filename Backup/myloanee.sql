@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 11, 2020 at 08:40 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- Generation Time: May 10, 2022 at 07:00 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +40,20 @@ CREATE TABLE `creditscore` (
 
 INSERT INTO `creditscore` (`creditscore_id`, `cst_id`, `last_updated`, `credit_score`) VALUES
 (1, 31, '2020-09-01', 600),
-(8, 8, '2020-09-09', 700);
+(8, 8, '2020-09-09', 700),
+(9, 35, '2020-12-01', 800),
+(10, 10, '2022-05-09', 690),
+(11, 11, '2022-05-09', 690),
+(12, 12, '2022-05-09', 450),
+(13, 14, '2022-05-09', 700),
+(14, 15, '2022-05-09', 640),
+(15, 16, '2022-05-09', 500),
+(17, 39, '2022-05-09', 300),
+(18, 40, '2022-05-09', 400),
+(19, 41, '2022-05-09', 350),
+(20, 42, '2022-05-09', 650),
+(21, 43, '2022-05-09', 700),
+(22, 38, '2022-05-09', 370);
 
 -- --------------------------------------------------------
 
@@ -78,20 +91,12 @@ CREATE TABLE `cst_customer` (
 --
 
 INSERT INTO `cst_customer` (`cst_id`, `usr_id`, `cst_type`, `comp_name`, `cst_fname`, `cst_mname`, `cst_lname`, `cst_dob`, `cst_gender`, `cst_address`, `cst_state`, `cst_contact`, `cst_email`, `cst_password`, `cst_bankdetail`, `cst_jobdetail`, `cst_note`, `cst_pan`, `cst_photo`, `cst_idproof`, `cst_addressproof`, `cst_status`) VALUES
-(8, 0, 'Customer', '', 'Aravinda', 'MV', 'IA', '2003-12-31', 'Male', '3rd floor, city light building', 'Karnatak', '7894563323', 'suraj@gmail.com', '111111', 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";}', '123456789 abc Hello', '', 'ANGPA182912', '366297822800px_COLOURBOX5006496.jpg', '26575Automation Studio.docx', '16263Integration Testing.docx', 'Active'),
-(9, 0, 'Company', 'techn opulse', '', '', '', '0000-00-00', '', '3rd floor, city light building', 'karnataka', '7894561231', 'raj@gmail.com', '123456789', '10004', 'test rec', '', '', '18838pickle.jpg', '23780panambur-beach.jpg', '13645Automation Studio.docx', 'Active'),
-(10, 0, 'Customer', '', 'Rajesh', 'kiran', 'IA', '2006-02-01', 'Male', '3rd floor, city light building', 'Karnataka', '7894561230', 'aravinda123@technopulse.in', '1234156789', 'a:3:{i:0;s:10:\"ICICI BANK\";i:1;s:16:\"1234567890123456\";i:2;s:7:\"A485979\";}', 'developer', '', 'ANGPA182912', '85834857607giridhar-murthy-1.jpg', '1761onlineauction.doc', '11270Online Auction detailed design.docx', 'Active'),
-(11, 0, 'Customer', '', 'Bharath', 'KA', 'IA', '2002-03-08', 'Male', 'Sahyadri road', 'Karnataka', '9874561230', 'bharathkl@technopulse.in', '123456789', 'a:3:{i:0;s:5:\"ICICI\";i:1;s:13:\"1234578901234\";i:2;s:10:\"ABJS234897\";}', 'developers', '', 'ANGPA122912', '1972127142Parag Khanna_Photo1 - PC Parag Khanna 1200x800.png', '16290Hydrangeas.jpg', '9267Jellyfish.jpg', 'Active'),
-(12, 0, 'Customer', '', 'Aravinda', 'MV', 'Naik', '1986-08-02', 'Male', '3RD FLOOR, CITY LIGHT, MANGALORE', 'Karnataka', '9986044114', 'mvaravin1da@gmail.com', 'q1w2e3r4', 'a:3:{i:0;s:5:\"ICICI\";i:1;s:12:\"001401532424\";i:2;s:7:\"1532424\";}', 'WORKING AS SOFTWARE DEVELOPER', '', 'ANGPA4338Q', '135739942257155550_10157098180566797_5541158147198025728_o.jpg', '65630871PANCARD.jpg', '282216231ab.gif', 'Active'),
-(13, 0, 'Company', 'Technopulse', '', '', '', '0000-00-00', '', '3rd floor, city light building, Balmatta cross', 'Karnataka', '7894561232', 'aravinda@technopulse.in', 'q1w2e3r4/', 'a:3:{i:0;s:11:\"Canara Bank\";i:1;s:16:\"1478523690123456\";i:2;s:7:\"IA29320\";}', 'Software company', '', 'ANGPA289829', '450681630technopulse.png', '109083493Hydrangeas.jpg', '779917847Koala.jpg', 'Active'),
-(14, 0, 'Customer', '', 'Ankith', 'A', 'Kumar', '1988-05-04', 'Male', '', '', '9874563456', 'ankithkumar@gmail.com', '123456789', '', '', '', '', '1197462426download.jpg', '1832450199', '1274005004', 'Active'),
-(15, 0, 'Customer', '', 'Ranjan', 'B', 'kumar', '1992-05-04', 'Male', '', '', '8796541230', 'ranjankumarb@gmail.com', 'q1w2e3r4', '', '', '', '', '1733800263main-qimg-46f663473bc10e5164a002e684f33b7e.jpg', '482651083', '1745029358', 'Active'),
-(16, 0, 'Customer', '', 'Peter', 'K', 'A', '1986-05-04', 'Male', '3rd floor city lligh', 'Karnataka', '8899775566', 'peterka123@gmail.com', 'q1w2e3r4', 'a:3:{i:0;s:5:\"iccii\";i:1;s:8:\"32032039\";i:2;s:5:\"82323\";}', 'Developer', '', 'ANGPA43368', '1933406153800px_COLOURBOX5006496.jpg', '1135817557a-small-girl-and-grandmother-with-tablet-at-home-PTDQHPB.jpg', '1300748332spectrum.jpg', 'Active'),
-(17, 0, 'Customer', '', 'Mahesh', 'Ram', 'K', '2002-08-30', 'Male', '3rd Floor,\r\nCity Light Building,\r\nMangalore', 'Karnataka', '9876543210', 'maheshramk@gmail.com', 'q1w2e3r4', 'a:3:{i:0;s:5:\"ICICI\";i:1;s:16:\"1123456789445211\";i:2;s:7:\"8282938\";}', 'DEVELOPER at infosys', '', 'ANGPA1553Q', '1962981090south-asian-or-a-mex.jpg', '234019612a-small-girl-and-grandmother-with-tablet-at-home-PTDQHPB.jpg', '1187722993spectrum.jpg', 'Active'),
-(19, 0, 'Customer', '', 'Gautham', 'Kumar', 'A', '1987-05-04', 'Male', '', '', '9986558114', 'myacccounts@gmail.com', 'q1w2e3r4', '', '', '', '', '116140306817457-mayank-kumar.jpg', '1694251797', '1795590633', 'Active'),
-(31, 0, 'Customer', '', 'Vinyas', 'Rai', 'V', '1986-05-04', 'Male', 'Shiva kripa,\r\nVidya nagar,\r\nPost Nehru nagar', 'Karnataka', '9982358114', 'mvaravinda@gmail.com', 'q1w2e3r4', 'a:3:{i:0;s:10:\"ICICI BANK\";i:1;s:12:\"001256325564\";i:2;s:4:\"A330\";}', 'Working as developer', '', 'ANGPA4338Q', '238532.jpg', '39809361WhatsApp Image 2020-05-20 at 12.26.48 PM.jpeg', '982148004spectrum.jpg', 'Active'),
-(32, 0, 'Company', 'Nmart', '', '', '', '0000-00-00', '', '3rd floor,\r\nCity light building', 'Karnataka', '9126548112', 'nmart@gmail.com', 'q1w2e3r4', 'a:3:{i:0;s:10:\"ICICI Bank\";i:1;s:16:\"1234567890123456\";i:2;s:5:\"I9230\";}', 'As developer', '', 'ANDPA2938Q', '1065084581res-stills.jpg', '1390421041Project Synopsis.docx', '1198395956MMMMMMMMMM.docx', 'Active'),
-(33, 0, 'Company', 'bPulse', '', '', '', '0000-00-00', '', '3rd floor,\r\nCity light building,\r\nMangalore', 'Karnataka', '9986058114', 'aravinda@gmail.com', 'q1w2e3r4', 'a:3:{i:0;s:10:\"IVIVI BANK\";i:1;s:16:\"7894561320154789\";i:2;s:5:\"I1253\";}', 'This is new job ', '', 'ANGOA2839Q', '60232887bPulse.jpg', '1988113247IMG_20200115_150257_426.jpg', '820630988spectrum.jpg', 'Active');
+(38, 0, 'Customer', '', 'Akash', '', 'M', '2001-05-30', 'Male', 'NO:5B KAMATVHI NAGAR CHENNAI 600125', 'Tamil Nadu', '7896545215', 'makash122003@gmail.com', 'makash123', 'a:3:{i:0;s:4:\"OXIS\";i:1;s:12:\"454500020000\";i:2;s:9:\"UTI200000\";}', 'GM', '', 'PWD20000', '1488541537akash.jpeg', '8877361id proof.jfif', '433439692id proof.jfif', 'Active'),
+(39, 0, 'Customer', '', 'Hemanth', 'Kumar', 'U', '2001-02-06', 'Male', 'NO.4 , anna nagar, chennai', 'Tamil Nadu', '6352738489', 'u.hemanthkumar4@gmail.com', 'uhemanthkumar123', 'a:3:{i:0;s:3:\"sbi\";i:1;s:12:\"sbi210210032\";i:2;s:11:\"sgdj23324q3\";}', 'CEO ', '', '21312weqewq', '1566235861WhatsApp Image 2022-05-09 at 10.29.36 AM.jpeg', '1930189648id proof.jfif', '1793164477id proof.jfif', 'Active'),
+(40, 0, 'Customer', '', 'Bharanidharan', '', 'G', '2003-05-05', 'Male', 'no.46, bharathi street, coimbatore', 'Tamil Nadu', '89646134346', 'mgdsbharani20@gmail.com', 'gbharani123', 'a:3:{i:0;s:3:\"sbi\";i:1;s:12:\"239897932732\";i:2;s:12:\"sbi023903208\";}', 'MD', '', 'asu21735712576', '256450922bharani.jpeg', '127290164id proof.jfif', '1157892849id proof.jfif', 'Active'),
+(41, 0, 'Customer', '', 'Arvind', '', 'B', '2003-01-16', 'Male', 'no. 23, nehru street, chennai', 'Tamil Nadu', '9856432456', 'arvindsuja026@gmail.com', 'barvind123', 'a:3:{i:0;s:11:\"indian bank\";i:1;s:12:\"indb23232324\";i:2;s:12:\"sdah32979327\";}', 'Manager', '', 's2h2f32323', '38935585arvind.jpeg', '1882453213id proof.jfif', '1376682430id proof.jfif', 'Active'),
+(42, 0, 'Customer', '', 'Harini', '', 'P', '2003-07-01', 'Female', 'no : 5b kanniyamam nagar tamil nadu', 'Tamil Nadu', '8945575434', 'harinipurushoth@gmail.com', 'pharini123', 'a:3:{i:0;s:4:\"hdfc\";i:1;s:10:\"7894561231\";i:2;s:10:\"as45000000\";}', 'GM ', '', '7845620652', '372943221harini.jpeg', '809629547id proof.jfif', '621795885id proof.jfif', 'Active'),
+(43, 0, 'Customer', '', 'Gayathri', '', 'R', '1998-11-12', 'Female', 'no:5 reddy street redhills chennai', 'Tamil Nadu', '6345690821', 'gayuk4504@gmail.com', 'rgayathri123', 'a:3:{i:0;s:3:\"sbi\";i:1;s:14:\"12345676543234\";i:2;s:10:\"sbo5215511\";}', 'SUPERVISOR', '', 'qw52000000', '600536345WIN_20220227_21_15_58_Pro.jpg', '509226882id proof.jfif', '1883657144id proof.jfif', 'Active');
 
 -- --------------------------------------------------------
 
@@ -167,38 +172,23 @@ CREATE TABLE `lacc_loanaccount` (
 --
 
 INSERT INTO `lacc_loanaccount` (`lacc_id`, `cst_id`, `lacc_no`, `comp_name`, `lacc_custname`, `lacc_swdof`, `lacc_dob`, `lacc_pan`, `lacc_securityentry`, `lacc_restype`, `lacc_resaddr`, `lacc_compaddr`, `lacc_permaddr`, `lacc_gender`, `lacc_martialst`, `lacc_jobprofile`, `lacc_education`, `lacc_ihave`, `lacc_bankac`, `lacc_loanamt`, `lacc_intrate`, `interest_amt`, `lacc_tenor`, `lacc_reference1`, `lacc_reference2`, `lacc_guarantor1`, `lacc_guarantor2`, `lacc_photo`, `lacc_idproof`, `lacc_adressproof`, `lacc_applicationdt`, `lacc_opendt`, `ltyp_id`, `ltyp_loantyp`, `lpf_id`, `lpf_amttype`, `lacc_ipfprocessingfee`, `lacc_remarks`, `dpmt_charge`, `capture_pancard`, `lacc_status`) VALUES
-(5, 10, '', '', 'Raj kiran IA', '', '2021-02-01', '', '', '', '', '', '', '', '', '', '', '', '', 0.00, 0.00, 0, '', '0', '0', '', '', '', '', '', '0000-00-00', '0000-00-00', 0, '', 0, '', 0.00, '', 0.00, '', ''),
-(6, 10, '', '', 'Raj kiran IA', '', '2021-02-01', '', '', '', '3rd floor, city light building, Karnataka', '', '', '', '', '', '', '', '', 0.00, 0.00, 0, '', '0', '0', '', '', '', '', '', '0000-00-00', '0000-00-00', 0, '', 0, '', 0.00, '', 0.00, '', ''),
-(7, 10, '', '', 'Raj kiran IA', '', '2021-02-01', '', '', '', '3rd floor, city light building, Karnataka', 'technopulse', '', '', '', '', '', '', '', 0.00, 0.00, 0, '', '0', '0', '', '', '', '', '', '0000-00-00', '0000-00-00', 0, '', 0, '', 0.00, '', 0.00, '', ''),
-(8, 10, '', '', 'Raj kiran IA', '', '2021-02-01', '', '', '', '3rd floor, city light building, Karnataka', 'technopulse', '3rd floor, city light building, Karnataka', 'Male', '', '', '', '', '', 0.00, 0.00, 0, '', '0', '0', '', '', '', '', '', '0000-00-00', '0000-00-00', 0, '', 0, '', 0.00, '', 0.00, '', ''),
-(9, 10, '', '', 'Raj kiran IA', '', '2021-02-01', '', '', '', '3rd floor, city light building, Karnataka', 'technopulse', '3rd floor, city light building, Karnataka', 'Male', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:6:\"Cheque\";i:2;s:11:\"technopulse\";i:3;s:10:\"3-6 Months\";}', '', '', '', 0.00, 0.00, 0, '', '0', '0', '', '', '', '', '', '0000-00-00', '0000-00-00', 0, '', 0, '', 0.00, '', 0.00, '', ''),
-(10, 10, '', '', 'Raj kiran IA', '', '2021-02-01', '', '', '', '3rd floor, city light building, Karnataka', 'technopulse', '3rd floor, city light building, Karnataka', 'Male', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:6:\"Cheque\";i:2;s:11:\"technopulse\";i:3;s:10:\"3-6 Months\";}', '', '', '', 25000.00, 0.00, 0, '', '0', '0', '', '', '', '', '', '0000-00-00', '0000-00-00', 0, '', 0, '', 0.00, '', 0.00, '', ''),
-(11, 10, '', '', 'Raj kiran IA', '', '2021-02-01', '', '', '', '3rd floor, city light building, Karnataka', 'technopulse', '3rd floor, city light building, Karnataka', 'Male', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:6:\"Cheque\";i:2;s:11:\"technopulse\";i:3;s:10:\"3-6 Months\";}', '', '', '', 25000.00, 18.00, 0, '30', '0', '0', '', '', '', '', '', '0000-00-00', '0000-00-00', 0, '', 0, '', 0.00, '', 0.00, '', ''),
-(13, 10, '#ML-200907-8', '', 'Raj kiran IA', '11', '2021-02-01', '', '', '', '3rd floor, city light building, Karnataka', 'technopulse', '3rd floor, city light building, Karnataka', 'Male', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:6:\"Cheque\";i:2;s:11:\"technopulse\";i:3;s:10:\"3-6 Months\";}', '', '', '', 25000.00, 18.00, 11250, '30', '0', '0', '', '', '', '', '', '0000-00-00', '2020-09-07', 6, 'Business loan', 3, 'Flat', 500.00, '', 18.00, '', 'Active'),
-(14, 10, '', '', 'Raj kiran IA', '', '2021-02-01', '', '', 'Owned by self/spouse', '3rd floor, city light building, Karnataka', 'technopulse', '3rd floor, city light building, Karnataka', 'Male', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:6:\"Cheque\";i:2;s:11:\"technopulse\";i:3;s:10:\"3-6 Months\";}', '', '', '', 25000.00, 18.00, 11250, '30', '0', '0', '', '', '', '', '', '0000-00-00', '0000-00-00', 6, 'Business loan', 3, 'Flat', 500.00, '', 18.00, '', 'Approved'),
-(15, 9, '', '', '  ', '', '0000-00-00', '', '', 'Owned by self/spouse', '3rd floor, city light building, karnataka', 'Aravinda', '3rd floor, city light building, karnataka', '', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:4:\"Cash\";i:2;s:8:\"Aravinda\";i:3;s:10:\"3-6 Months\";}', '', '', '', 25000.00, 24.00, 12000, '24', '0', '0', '', '', '', '', '', '0000-00-00', '0000-00-00', 4, 'Personal Loan', 3, 'Flat', 500.00, '', 18.00, '', 'Approved'),
-(16, 9, '', '', '  ', '', '0000-00-00', '', '', 'Owned by self/spouse', '3rd floor, city light building, karnataka', 'Aravinda', '3rd floor, city light building, karnataka', '', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:4:\"Cash\";i:2;s:8:\"Aravinda\";i:3;s:10:\"3-6 Months\";}', '', '', '', 25000.00, 24.00, 12000, '24', '0', '0', '', '', '', '', '', '0000-00-00', '0000-00-00', 4, 'Personal Loan', 3, 'Flat', 500.00, '', 18.00, '', 'Approved'),
-(17, 9, '', '', '  ', '', '0000-00-00', '', '', 'Owned by self/spouse', '3rd floor, city light building, karnataka', 'Aravinda', '3rd floor, city light building, karnataka', '', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:4:\"Cash\";i:2;s:8:\"Aravinda\";i:3;s:10:\"3-6 Months\";}', '', '', '', 25000.00, 24.00, 0, '24', '0', '0', '', '', '', '', '', '0000-00-00', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
-(18, 9, '', 'techn opulse', '  ', '', '0000-00-00', '', '', 'Owned by self/spouse', '3rd floor, city light building, karnataka', 'Aravinda', '3rd floor, city light building, karnataka', '', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:4:\"Cash\";i:2;s:8:\"Aravinda\";i:3;s:10:\"3-6 Months\";}', '', '', '', 25000.00, 24.00, 0, '24', '0', '0', '', '', '', '', '', '0000-00-00', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
-(28, 8, '', '', 'Aravinda MV IA', '', '2003-12-31', 'ANGPA182912', '', 'Rented- With family', 'a:4:{i:0;s:30:\"3rd floor, city light building\";i:1;s:8:\"Karnatak\";i:2;s:11:\"78945614230\";i:3;s:15:\"suraj@gmail.com\";}', 'Aravinda', 'a:4:{i:0;s:30:\"3rd floor, city light building\";i:1;s:8:\"Karnatak\";i:2;s:11:\"78945614230\";i:3;s:15:\"suraj@gmail.com\";}', 'Male', '', 'a:4:{i:0;s:5:\"25000\";i:1;s:6:\"Cheque\";i:2;s:8:\"Aravinda\";i:3;s:9:\"1-2 Years\";}', '', '', '', 175000.00, 24.00, 0, '24', '0', '0', '', '', '12740hotel.jpg', '26575Automation Studio.docx', '16263Integration Testing.docx', '2020-03-14', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
-(29, 8, '', '', 'Aravinda MV IA', '', '2003-12-31', 'ANGPA182912', '', 'Owned by parents/sibling', 'a:4:{i:0;s:30:\"3rd floor, city light building\";i:1;s:8:\"Karnatak\";i:2;s:11:\"78945614230\";i:3;s:15:\"suraj@gmail.com\";}', 'Aravinda', 'a:4:{i:0;s:30:\"3rd floor, city light building\";i:1;s:8:\"Karnatak\";i:2;s:11:\"78945614230\";i:3;s:15:\"suraj@gmail.com\";}', 'Male', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:6:\"Cheque\";i:2;s:8:\"Aravinda\";i:3;s:11:\"6-12 Months\";}', '', '', '', 25000.00, 8.00, 0, '6', '0', '0', '', '', '12740hotel.jpg', '26575Automation Studio.docx', '16263Integration Testing.docx', '2020-03-14', '0000-00-00', 5, 'Gold Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
-(30, 10, '', '', 'Raj kiran IA', '', '2021-02-01', '', '', 'Owned by parents/sibling', 'a:4:{i:0;s:30:\"3rd floor, city light building\";i:1;s:9:\"Karnataka\";i:2;s:10:\"7894561230\";i:3;s:23:\"aravinda@technopulse.in\";}', 'icici', 'a:4:{i:0;s:30:\"3rd floor, city light building\";i:1;s:9:\"Karnataka\";i:2;s:10:\"7894561230\";i:3;s:23:\"aravinda@technopulse.in\";}', 'Male', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:6:\"Cheque\";i:2;s:5:\"icici\";i:3;s:11:\"6-12 Months\";}', '', '', '', 50000.00, 24.00, 0, '24', '0', '0', '', '', '238532.jpg', '1761onlineauction.doc', '11270Online Auction detailed design.docx', '2020-03-20', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
-(31, 11, '', '', 'Bharath K IA', '', '2002-03-08', 'ANGPA122912', '', 'Owned by self/spouse', 'a:4:{i:0;s:13:\"Sahyadri road\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9874561230\";i:3;s:24:\"bharathkl@technopulse.in\";}', 'icici', 'a:4:{i:0;s:13:\"Sahyadri road\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9874561230\";i:3;s:24:\"bharathkl@technopulse.in\";}', 'Male', '', 'a:4:{i:0;s:5:\"25000\";i:1;s:4:\"Cash\";i:2;s:5:\"icici\";i:3;s:11:\"6-12 Months\";}', '', '', '', 500000.00, 24.00, 0, '24', '0', '0', '', '', '8944Tulips.jpg', '16290Hydrangeas.jpg', '9267Jellyfish.jpg', '2020-03-20', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
-(32, 12, '', '', 'Aravinda MV Naik', 'M V Naik', '1986-08-02', 'ANGPA4338Q', 'SSLC Mark sheet', 'Owned by self/spouse', 'a:4:{i:0;s:32:\"3RD FLOOR, CITY LIGHT, MANGALORE\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'technopulse', 'a:4:{i:0;s:32:\"3RD FLOOR, CITY LIGHT, MANGALORE\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'Male', 'Married', 'a:4:{i:0;s:5:\"35000\";i:1;s:13:\"Bank Transfer\";i:2;s:11:\"technopulse\";i:3;s:8:\"5+ Years\";}', '', 'In federal bank on fd', '', 200000.00, 14.00, 0, '30', 'Madhesh kuamr', 'perkson', 'Reeta', 'Meena', '135739942257155550_10157098180566797_5541158147198025728_o.jpg', '65630871PANCARD.jpg', '282216231ab.gif', '2020-08-31', '0000-00-00', 8, 'Education loan', 0, '', 0.00, 'New account', 0.00, '', 'Rejected'),
-(33, 16, '#ML-2009-2', '', 'Peter K A', 'Prathik', '1986-05-04', 'ANGPA43368', 'Documents', 'Owned by self/spouse', 'a:4:{i:0;s:20:\"3rd floor city lligh\";i:1;s:9:\"Karnataka\";i:2;s:10:\"8899775566\";i:3;s:20:\"peterka123@gmail.com\";}', 'Technopulse', 'a:4:{i:0;s:20:\"3rd floor city lligh\";i:1;s:9:\"Karnataka\";i:2;s:10:\"8899775566\";i:3;s:20:\"peterka123@gmail.com\";}', 'Male', 'Married', 'a:4:{i:0;s:5:\"10000\";i:1;s:6:\"Cheque\";i:2;s:11:\"Technopulse\";i:3;s:10:\"3-6 Months\";}', '', 'No loan accounts', '', 20000.00, 30.00, 500, '1', 'Raj', 'kiran', 'Asha', 'Kanchana', '1933406153800px_COLOURBOX5006496.jpg', '1135817557a-small-girl-and-grandmother-with-tablet-at-home-PTDQHPB.jpg', '1300748332spectrum.jpg', '2020-09-02', '2015-09-01', 5, 'Payday Loans', 3, 'Flat', 500.00, '', 24.00, '', 'Active'),
-(34, 12, '', '', 'Aravinda MV Naik', 'M V Naik', '1986-08-02', 'ANGPA4338Q', 'SSLC', 'Owned by self/spouse', 'a:4:{i:0;s:32:\"3RD FLOOR, CITY LIGHT, MANGALORE\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'ibc', 'a:4:{i:0;s:32:\"3RD FLOOR, CITY LIGHT, MANGALORE\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'Male', 'Married', 'a:4:{i:0;s:5:\"10000\";i:1;s:6:\"Cheque\";i:2;s:3:\"ibc\";i:3;s:10:\"0-3 Months\";}', '', 'No ac', '', 50000.00, 15.00, 9375, '30', 'Raj', 'kiran', 'mahsh', 'nida', '135739942257155550_10157098180566797_5541158147198025728_o.jpg', '65630871PANCARD.jpg', '282216231ab.gif', '2020-09-02', '0000-00-00', 9, 'Vehicle Loan', 3, 'Flat', 500.00, 'For new account', 24.00, '', 'Declined'),
-(35, 12, '', '', 'Aravinda MV Naik', '', '1986-08-02', 'ANGPA4338Q', '', '', 'a:4:{i:0;s:32:\"3RD FLOOR, CITY LIGHT, MANGALORE\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', '', 'a:4:{i:0;s:32:\"3RD FLOOR, CITY LIGHT, MANGALORE\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'Male', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 99999999.99, 12.00, 0, '24', '', '', '', '', '135739942257155550_10157098180566797_5541158147198025728_o.jpg', '65630871PANCARD.jpg', '282216231ab.gif', '2020-09-02', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
-(36, 12, '', '', 'Aravinda MV Naik', '', '1986-08-02', 'ANGPA4338Q', '', '', 'a:4:{i:0;s:32:\"3RD FLOOR, CITY LIGHT, MANGALORE\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', '', 'a:4:{i:0;s:32:\"3RD FLOOR, CITY LIGHT, MANGALORE\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'Male', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 99999999.99, 12.00, 0, '24', '', '', '', '', '135739942257155550_10157098180566797_5541158147198025728_o.jpg', '65630871PANCARD.jpg', '282216231ab.gif', '2020-09-02', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
-(37, 12, '#ML-2009-1', '', 'Aravinda MV Naik', 'M V Naik', '1986-08-02', 'ANGPA4338Q', 'Land document', 'Owned by parents/sibling', 'a:4:{i:0;s:32:\"3RD FLOOR, CITY LIGHT, MANGALORE\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'Technopulse', 'a:4:{i:0;s:32:\"3RD FLOOR, CITY LIGHT, MANGALORE\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'Male', 'Married', 'a:4:{i:0;s:5:\"35000\";i:1;s:6:\"Cheque\";i:2;s:11:\"Technopulse\";i:3;s:10:\"0-3 Months\";}', '', 'No loan accounts', '', 250000.00, 12.00, 60000, '24', 'Ram', 'kiran', 'ajay', 'kiran', '135739942257155550_10157098180566797_5541158147198025728_o.jpg', '65630871PANCARD.jpg', '282216231ab.gif', '2020-09-02', '2020-09-02', 4, 'Personal Loan', 4, 'Percentage', 12500.00, '', 24.00, '', 'Active'),
-(38, 17, '#ML-200903-1', '', 'Mahesh Ram K', 'Pratham', '2002-08-30', 'ANGPA1553Q', 'Land document', 'Owned by self/spouse', 'a:4:{i:0;s:43:\"3rd Floor,\r\nCity Light Building,\r\nMangalore\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9876543210\";i:3;s:20:\"maheshramk@gmail.com\";}', 'Techno', 'a:4:{i:0;s:43:\"3rd Floor,\r\nCity Light Building,\r\nMangalore\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9876543210\";i:3;s:20:\"maheshramk@gmail.com\";}', 'Male', 'Married', 'a:4:{i:0;s:5:\"50000\";i:1;s:4:\"Cash\";i:2;s:6:\"Techno\";i:3;s:9:\"2-3 Years\";}', '', 'No loan accounts', '', 250000.00, 18.00, 112500, '30', 'Raj', 'kiran', 'Aditya', 'Peter', '1962981090south-asian-or-a-mex.jpg', '234019612a-small-girl-and-grandmother-with-tablet-at-home-PTDQHPB.jpg', '1187722993spectrum.jpg', '2020-09-03', '2020-09-03', 6, 'Business loan', 4, 'Percentage', 12500.00, '', 18.00, '', 'Active'),
-(39, 17, '#ML-200103-1', '', 'Mahesh Ram K', 'M V Naik', '2002-08-30', 'ANGPA1553Q', '', 'Owned by self/spouse', 'a:4:{i:0;s:43:\"3rd Floor,\r\nCity Light Building,\r\nMangalore\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9876543210\";i:3;s:20:\"maheshramk@gmail.com\";}', 'Telsa', 'a:4:{i:0;s:43:\"3rd Floor,\r\nCity Light Building,\r\nMangalore\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9876543210\";i:3;s:20:\"maheshramk@gmail.com\";}', 'Male', '', 'a:4:{i:0;s:5:\"25000\";i:1;s:13:\"Bank Transfer\";i:2;s:5:\"Telsa\";i:3;s:11:\"6-12 Months\";}', '', '', '', 75000.00, 15.00, 28125, '30', '', '', '', '', '1962981090south-asian-or-a-mex.jpg', '234019612a-small-girl-and-grandmother-with-tablet-at-home-PTDQHPB.jpg', '1187722993spectrum.jpg', '2020-01-03', '2020-01-03', 9, 'Vehicle Loan', 3, 'Flat', 500.00, '', 18.00, '', 'Active'),
-(41, 31, '#ML-200907-7', '', 'Aravinda M V', '', '1986-05-04', 'ANGPA4338Q', '', 'Owned by parents/sibling', 'a:4:{i:0;s:44:\"Shiva kripa,\r\nVidya nagar,\r\nPost Nehru nagar\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'Technopulse', 'a:4:{i:0;s:44:\"Shiva kripa,\r\nVidya nagar,\r\nPost Nehru nagar\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'Male', '', 'a:4:{i:0;s:5:\"10000\";i:1;s:6:\"Cheque\";i:2;s:11:\"Technopulse\";i:3;s:10:\"3-6 Months\";}', '', '', '', 20000.00, 30.00, 500, '1', '', '', '', '', '207476148417457-mayank-kumar.jpg', '39809361WhatsApp Image 2020-05-20 at 12.26.48 PM.jpeg', '982148004spectrum.jpg', '2020-09-07', '2020-09-07', 5, 'Payday Loans', 3, 'Flat', 500.00, '', 18.00, '', 'Active'),
-(42, 31, '#ML-200907-6', '', 'Aravinda M V', '', '1986-05-04', 'ANGPA4338Q', '', 'Owned by parents/sibling', 'a:4:{i:0;s:44:\"Shiva kripa,\r\nVidya nagar,\r\nPost Nehru nagar\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'Technopulse', 'a:4:{i:0;s:44:\"Shiva kripa,\r\nVidya nagar,\r\nPost Nehru nagar\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'Male', '', 'a:4:{i:0;s:5:\"25000\";i:1;s:4:\"Cash\";i:2;s:11:\"Technopulse\";i:3;s:10:\"3-6 Months\";}', '', '', '', 50000.00, 12.00, 12000, '24', '', '', '', '', '207476148417457-mayank-kumar.jpg', '39809361WhatsApp Image 2020-05-20 at 12.26.48 PM.jpeg', '982148004spectrum.jpg', '2020-09-07', '2020-09-07', 4, 'Personal Loan', 3, 'Flat', 500.00, '', 18.00, '', 'Active'),
-(43, 31, '#ML-200907-5', '', 'Aravinda M V', 'M V Naik', '1986-05-04', 'ANGPA4338Q', 'Land Document', 'Owned by self/spouse', 'a:4:{i:0;s:44:\"Shiva kripa,\r\nVidya nagar,\r\nPost Nehru nagar\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'Technopulse', 'a:4:{i:0;s:44:\"Shiva kripa,\r\nVidya nagar,\r\nPost Nehru nagar\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:20:\"mvaravinda@gmail.com\";}', 'Male', 'Married', 'a:4:{i:0;s:5:\"10000\";i:1;s:13:\"Bank Transfer\";i:2;s:11:\"Technopulse\";i:3;s:9:\"2-3 Years\";}', '', '', '', 250000.00, 18.00, 112500, '30', '', '', '', '', '207476148417457-mayank-kumar.jpg', '39809361WhatsApp Image 2020-05-20 at 12.26.48 PM.jpeg', '982148004spectrum.jpg', '2020-09-07', '2020-09-07', 6, 'Business loan', 4, 'Percentage', 12500.00, '', 18.00, '', 'Active'),
-(44, 10, '', '', 'Raj kiran IA', '', '2006-02-01', 'ANGPA182912', '', 'Owned by parents/sibling', 'a:4:{i:0;s:30:\"3rd floor, city light building\";i:1;s:9:\"Karnataka\";i:2;s:10:\"7894561230\";i:3;s:26:\"aravinda123@technopulse.in\";}', 'Technopulse', 'a:4:{i:0;s:30:\"3rd floor, city light building\";i:1;s:9:\"Karnataka\";i:2;s:10:\"7894561230\";i:3;s:26:\"aravinda123@technopulse.in\";}', 'Male', '', 'a:4:{i:0;s:5:\"10000\";i:1;s:4:\"Cash\";i:2;s:11:\"Technopulse\";i:3;s:11:\"6-12 Months\";}', '', '', '', 20000.00, 12.00, 0, '24', '', '', '', '', '85834857607giridhar-murthy-1.jpg', '1761onlineauction.doc', '11270Online Auction detailed design.docx', '2020-09-07', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
-(45, 33, '#ML-200601-9', 'bPulse', '  ', '', '0000-00-00', '', 'Land document', 'Owned by parents/sibling', 'a:4:{i:0;s:43:\"3rd floor,\r\nCity light building,\r\nMangalore\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:18:\"aravinda@gmail.com\";}', 'BPlus', 'a:4:{i:0;s:43:\"3rd floor,\r\nCity light building,\r\nMangalore\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:18:\"aravinda@gmail.com\";}', '', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:4:\"Cash\";i:2;s:5:\"BPlus\";i:3;s:10:\"0-3 Months\";}', '', 'No loan accounts', '', 250000.00, 12.00, 60000, '24', 'Raj', 'Ajay', 'Bharath', 'Kiran', '60232887bPulse.jpg', '1988113247IMG_20200115_150257_426.jpg', '820630988spectrum.jpg', '2020-06-10', '2020-06-01', 4, 'Personal Loan', 4, 'Percentage', 12500.00, '', 18.00, '', 'Closed'),
-(46, 33, '#ML-200910-9', 'bPulse', '  ', '', '0000-00-00', '', '', 'Owned by parents/sibling', 'a:4:{i:0;s:43:\"3rd floor,\r\nCity light building,\r\nMangalore\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:18:\"aravinda@gmail.com\";}', 'Technopulse', 'a:4:{i:0;s:43:\"3rd floor,\r\nCity light building,\r\nMangalore\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:18:\"aravinda@gmail.com\";}', '', '', 'a:4:{i:0;s:5:\"10000\";i:1;s:4:\"Cash\";i:2;s:11:\"Technopulse\";i:3;s:11:\"6-12 Months\";}', '', '', '', 75000.00, 15.00, 28125, '30', '', '', '', '', '60232887bPulse.jpg', '1988113247IMG_20200115_150257_426.jpg', '820630988spectrum.jpg', '2020-09-10', '2020-09-10', 9, 'Vehicle Loan', 3, 'Flat', 500.00, '', 18.00, '', 'Closed'),
-(47, 33, '#ML-200910-9', 'bPulse', '  ', '', '0000-00-00', '', '', 'Owned by self/spouse', 'a:4:{i:0;s:43:\"3rd floor,\r\nCity light building,\r\nMangalore\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:18:\"aravinda@gmail.com\";}', 'Technopulse', 'a:4:{i:0;s:43:\"3rd floor,\r\nCity light building,\r\nMangalore\";i:1;s:9:\"Karnataka\";i:2;s:10:\"9986058114\";i:3;s:18:\"aravinda@gmail.com\";}', '', '', 'a:4:{i:0;s:5:\"10000\";i:1;s:6:\"Cheque\";i:2;s:11:\"Technopulse\";i:3;s:9:\"3-5 Years\";}', '', '', '', 25000.00, 12.00, 6000, '24', '', '', '', '', '60232887bPulse.jpg', '1988113247IMG_20200115_150257_426.jpg', '820630988spectrum.jpg', '2020-09-10', '2020-09-10', 4, 'Personal Loan', 3, 'Flat', 500.00, '', 18.00, '', 'Closed');
+(50, 42, '', '', 'Harini  P', '', '2003-07-01', '7845620652', '', '', 'a:4:{i:0;s:35:\"no : 5b kanniyamam nagar tamil nadu\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"8945575434\";i:3;N;}', '', 'a:4:{i:0;s:35:\"no : 5b kanniyamam nagar tamil nadu\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"8945575434\";i:3;N;}', 'Female', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 0.00, 20.00, 0, '24', '', '', '', '', '372943221harini.jpeg', '809629547id proof.jfif', '621795885id proof.jfif', '2022-05-09', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Rejected'),
+(51, 42, '', '', 'Harini  P', '', '2003-07-01', '7845620652', '', 'Owned by self/spouse', 'a:4:{i:0;s:35:\"no : 5b kanniyamam nagar tamil nadu\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"8945575434\";i:3;N;}', 'DLF', 'a:4:{i:0;s:35:\"no : 5b kanniyamam nagar tamil nadu\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"8945575434\";i:3;N;}', 'Female', '', 'a:4:{i:0;s:5:\"50000\";i:1;s:13:\"Bank Transfer\";i:2;s:3:\"DLF\";i:3;s:9:\"2-3 Years\";}', '', '', '', 100000.00, 20.00, 0, '24', '', '', '', '', '372943221harini.jpeg', '809629547id proof.jfif', '621795885id proof.jfif', '2022-05-09', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Rejected'),
+(52, 38, '', '', 'Akash  M', '', '2001-05-30', 'PWD20000', '', 'Owned by self/spouse', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', 'CMSC', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:6:\"100000\";i:1;s:4:\"Cash\";i:2;s:4:\"CMSC\";i:3;s:9:\"1-2 Years\";}', '', '', '', 500000.00, 18.00, 0, '30', '', '', '', '', '1488541537akash.jpeg', '8877361id proof.jfif', '433439692id proof.jfif', '2022-05-09', '0000-00-00', 6, 'Business loan', 0, '', 0.00, '', 0.00, '', 'Rejected'),
+(53, 43, '', '', 'Gayathri  R', '', '1998-11-12', 'qw52000000', '', 'Owned by self/spouse', 'a:4:{i:0;s:34:\"no:5 reddy street redhills chennai\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"6345690821\";i:3;N;}', 'COGNIZENT', 'a:4:{i:0;s:34:\"no:5 reddy street redhills chennai\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"6345690821\";i:3;N;}', 'Female', '', 'a:4:{i:0;s:6:\"200000\";i:1;s:13:\"Bank Transfer\";i:2;s:9:\"COGNIZENT\";i:3;s:8:\"5+ Years\";}', '', '', '', 1000000.00, 16.00, 200000, '15', '', '', '', '', '405304204gayu.jpeg', '509226882id proof.jfif', '1883657144id proof.jfif', '2022-05-09', '0000-00-00', 7, 'Home Loan', 5, 'Percentage', 40000.00, '', 18.00, '', 'Approved'),
+(54, 39, '', '', 'Hemanth Kumar U', '', '2001-02-06', '21312weqewq', '', 'Owned by self/spouse', 'a:4:{i:0;s:26:\"NO.4 , anna nagar, chennai\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"6352738489\";i:3;N;}', 'AKASH', 'a:4:{i:0;s:26:\"NO.4 , anna nagar, chennai\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"6352738489\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:6:\"100000\";i:1;s:6:\"Cheque\";i:2;s:5:\"AKASH\";i:3;s:9:\"2-3 Years\";}', '', '', '', 1000000.00, 18.00, 450000, '30', '', '', '', '', '1566235861WhatsApp Image 2022-05-09 at 10.29.36 AM.jpeg', '1930189648id proof.jfif', '1793164477id proof.jfif', '2022-05-09', '0000-00-00', 6, 'Business loan', 5, 'Percentage', 40000.00, '', 18.00, '', 'Approved'),
+(55, 40, '', '', 'Bharanidharan  G', '', '2003-05-05', 'asu21735712576', '', 'Owned by self/spouse', 'a:4:{i:0;s:34:\"no.46, bharathi street, coimbatore\";i:1;s:10:\"Tamil Nadu\";i:2;s:11:\"89646134346\";i:3;N;}', 'IBM', 'a:4:{i:0;s:34:\"no.46, bharathi street, coimbatore\";i:1;s:10:\"Tamil Nadu\";i:2;s:11:\"89646134346\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:6:\"100000\";i:1;s:13:\"Bank Transfer\";i:2;s:3:\"IBM\";i:3;s:9:\"3-5 Years\";}', '', '', '', 300000.00, 20.00, 120000, '24', '', '', '', '', '256450922bharani.jpeg', '127290164id proof.jfif', '1157892849id proof.jfif', '2022-05-09', '0000-00-00', 4, 'Personal Loan', 4, 'Percentage', 15000.00, '', 18.00, '', 'Approved'),
+(56, 41, '', '', 'Arvind  B', '', '2003-01-16', 's2h2f32323', '', 'Rented- With family', 'a:4:{i:0;s:29:\"no. 23, nehru street, chennai\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"9856432456\";i:3;N;}', 'STACK', 'a:4:{i:0;s:29:\"no. 23, nehru street, chennai\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"9856432456\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:6:\"100000\";i:1;s:13:\"Bank Transfer\";i:2;s:5:\"STACK\";i:3;s:9:\"3-5 Years\";}', '', '', '', 1500000.00, 16.00, 0, '15', '', '', '', '', '38935585arvind.jpeg', '1882453213id proof.jfif', '1376682430id proof.jfif', '2022-05-09', '0000-00-00', 7, 'Home Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
+(57, 38, '', '', 'Akash  M', '', '2001-05-30', 'PWD20000', '', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 0.00, 20.00, 0, '24', '', '', '', '', '1488541537akash.jpeg', '8877361id proof.jfif', '433439692id proof.jfif', '2022-05-09', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Rejected'),
+(58, 38, '', '', 'Akash  M', '', '2001-05-30', 'PWD20000', '', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 0.00, 20.00, 0, '24', '', '', '', '', '1488541537akash.jpeg', '8877361id proof.jfif', '433439692id proof.jfif', '2022-05-10', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Rejected'),
+(59, 38, '', '', 'Akash  M', '', '2001-05-30', 'PWD20000', '', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 0.00, 20.00, 0, '24', '', '', '', '', '1488541537akash.jpeg', '8877361id proof.jfif', '433439692id proof.jfif', '2022-05-10', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
+(60, 38, '', '', 'Akash  M', '', '2001-05-30', 'PWD20000', '', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 0.00, 20.00, 0, '24', '', '', '', '', '1488541537akash.jpeg', '8877361id proof.jfif', '433439692id proof.jfif', '2022-05-10', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
+(61, 38, '', '', 'Akash  M', '', '2001-05-30', 'PWD20000', '', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 0.00, 20.00, 0, '24', '', '', '', '', '1488541537akash.jpeg', '8877361id proof.jfif', '433439692id proof.jfif', '2022-05-10', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
+(62, 38, '', '', 'Akash  M', '', '2001-05-30', 'PWD20000', '', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 0.00, 20.00, 0, '24', '', '', '', '', '1488541537akash.jpeg', '8877361id proof.jfif', '433439692id proof.jfif', '2022-05-10', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
+(63, 38, '', '', 'Akash  M', '', '2001-05-30', 'PWD20000', '', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 0.00, 18.00, 0, '30', '', '', '', '', '1488541537akash.jpeg', '8877361id proof.jfif', '433439692id proof.jfif', '2022-05-10', '0000-00-00', 6, 'Business loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
+(64, 38, '', '', 'Akash  M', '', '2001-05-30', 'PWD20000', '', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 0.00, 20.00, 0, '24', '', '', '', '', '1488541537akash.jpeg', '8877361id proof.jfif', '433439692id proof.jfif', '2022-05-10', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
+(65, 38, '', '', 'Akash  M', '', '2001-05-30', 'PWD20000', '', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 0.00, 20.00, 0, '24', '', '', '', '', '1488541537akash.jpeg', '8877361id proof.jfif', '433439692id proof.jfif', '2022-05-10', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending'),
+(66, 38, '', '', 'Akash  M', '', '2001-05-30', 'PWD20000', '', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', '', 'a:4:{i:0;s:35:\"NO:5B KAMATVHI NAGAR CHENNAI 600125\";i:1;s:10:\"Tamil Nadu\";i:2;s:10:\"7896545215\";i:3;N;}', 'Male', '', 'a:4:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";}', '', '', '', 0.00, 20.00, 0, '24', '', '', '', '', '1488541537akash.jpeg', '8877361id proof.jfif', '433439692id proof.jfif', '2022-05-10', '0000-00-00', 4, 'Personal Loan', 0, '', 0.00, '', 0.00, '', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -470,7 +460,37 @@ INSERT INTO `lins_loaninstallment` (`lins_id`, `lacc_id`, `lins_no`, `lins_date`
 (485, 47, 21, '2022-06-10', 1041.67, 12, 250.00, '', '', 'Active'),
 (486, 47, 22, '2022-07-10', 1041.67, 12, 250.00, '', '', 'Active'),
 (487, 47, 23, '2022-08-10', 1041.67, 12, 250.00, '', '', 'Active'),
-(488, 47, 24, '2022-09-10', 1041.67, 12, 250.00, '', '', 'Active');
+(488, 47, 24, '2022-09-10', 1041.67, 12, 250.00, '', '', 'Active'),
+(489, 48, 1, '2021-01-01', 833.33, 18, 375.00, '', '', 'Active'),
+(490, 48, 2, '2021-02-01', 833.33, 18, 375.00, '', '', 'Active'),
+(491, 48, 3, '2021-03-01', 833.33, 18, 375.00, '', '', 'Active'),
+(492, 48, 4, '2021-04-01', 833.33, 18, 375.00, '', '', 'Active'),
+(493, 48, 5, '2021-05-01', 833.33, 18, 375.00, '', '', 'Active'),
+(494, 48, 6, '2021-06-01', 833.33, 18, 375.00, '', '', 'Active'),
+(495, 48, 7, '2021-07-01', 833.33, 18, 375.00, '', '', 'Active'),
+(496, 48, 8, '2021-08-01', 833.33, 18, 375.00, '', '', 'Active'),
+(497, 48, 9, '2021-09-01', 833.33, 18, 375.00, '', '', 'Active'),
+(498, 48, 10, '2021-10-01', 833.33, 18, 375.00, '', '', 'Active'),
+(499, 48, 11, '2021-11-01', 833.33, 18, 375.00, '', '', 'Active'),
+(500, 48, 12, '2021-12-01', 833.33, 18, 375.00, '', '', 'Active'),
+(501, 48, 13, '2022-01-01', 833.33, 18, 375.00, '', '', 'Active'),
+(502, 48, 14, '2022-02-01', 833.33, 18, 375.00, '', '', 'Active'),
+(503, 48, 15, '2022-03-01', 833.33, 18, 375.00, '', '', 'Active'),
+(504, 48, 16, '2022-04-01', 833.33, 18, 375.00, '', '', 'Active'),
+(505, 48, 17, '2022-05-01', 833.33, 18, 375.00, '', '', 'Active'),
+(506, 48, 18, '2022-06-01', 833.33, 18, 375.00, '', '', 'Active'),
+(507, 48, 19, '2022-07-01', 833.33, 18, 375.00, '', '', 'Active'),
+(508, 48, 20, '2022-08-01', 833.33, 18, 375.00, '', '', 'Active'),
+(509, 48, 21, '2022-09-01', 833.33, 18, 375.00, '', '', 'Active'),
+(510, 48, 22, '2022-10-01', 833.33, 18, 375.00, '', '', 'Active'),
+(511, 48, 23, '2022-11-01', 833.33, 18, 375.00, '', '', 'Active'),
+(512, 48, 24, '2022-12-01', 833.33, 18, 375.00, '', '', 'Active'),
+(513, 48, 25, '2023-01-01', 833.33, 18, 375.00, '', '', 'Active'),
+(514, 48, 26, '2023-02-01', 833.33, 18, 375.00, '', '', 'Active'),
+(515, 48, 27, '2023-03-01', 833.33, 18, 375.00, '', '', 'Active'),
+(516, 48, 28, '2023-04-01', 833.33, 18, 375.00, '', '', 'Active'),
+(517, 48, 29, '2023-05-01', 833.33, 18, 375.00, '', '', 'Active'),
+(518, 48, 30, '2023-06-01', 833.33, 18, 375.00, '', '', 'Active');
 
 -- --------------------------------------------------------
 
@@ -1201,7 +1221,69 @@ INSERT INTO `ltr_loantransaction` (`ltr_id`, `lacc_id`, `lins_id`, `ltr_transdt`
 (937, 47, 486, '2020-09-10', 'Payment', '99', 1291.00, 'VISA', '', '', 'a:5:{i:0;s:4:\"VISA\";i:1;s:14:\"Ankith K Desai\";i:2;s:16:\"1234567890123456\";i:3;s:7:\"2021-01\";i:4;s:3:\"492\";}', 'Active', '', '', 0, 0),
 (938, 47, 487, '2020-09-10', 'Payment', '100', 1291.00, 'VISA', '', '', 'a:5:{i:0;s:4:\"VISA\";i:1;s:14:\"Ankith K Desai\";i:2;s:16:\"1234567890123456\";i:3;s:7:\"2021-01\";i:4;s:3:\"159\";}', 'Active', '', '', 0, 0),
 (939, 47, 488, '2020-09-10', 'Payment', '101', 10.00, 'VISA', '', '', 'a:5:{i:0;s:4:\"VISA\";i:1;s:14:\"Ankith K Desai\";i:2;s:16:\"1234568789012345\";i:3;s:7:\"2021-01\";i:4;s:3:\"159\";}', 'Active', '', '', 0, 0),
-(943, 47, 488, '2020-09-10', 'Payment', '102', 1281.00, 'VISA', '', '', 'a:5:{i:0;s:4:\"VISA\";i:1;s:14:\"Ankith K Desai\";i:2;s:16:\"1478529631147852\";i:3;s:7:\"2020-12\";i:4;s:3:\"596\";}', 'Active', '', '', 0, 0);
+(943, 47, 488, '2020-09-10', 'Payment', '102', 1281.00, 'VISA', '', '', 'a:5:{i:0;s:4:\"VISA\";i:1;s:14:\"Ankith K Desai\";i:2;s:16:\"1478529631147852\";i:3;s:7:\"2020-12\";i:4;s:3:\"596\";}', 'Active', '', '', 0, 0),
+(944, 48, 489, '2021-01-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(945, 48, 489, '2021-01-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(946, 48, 490, '2021-02-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(947, 48, 490, '2021-02-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(948, 48, 491, '2021-03-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(949, 48, 491, '2021-03-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(950, 48, 492, '2021-04-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(951, 48, 492, '2021-04-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(952, 48, 493, '2021-05-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(953, 48, 493, '2021-05-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(954, 48, 494, '2021-06-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(955, 48, 494, '2021-06-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(956, 48, 495, '2021-07-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(957, 48, 495, '2021-07-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(958, 48, 496, '2021-08-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(959, 48, 496, '2021-08-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(960, 48, 497, '2021-09-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(961, 48, 497, '2021-09-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(962, 48, 498, '2021-10-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(963, 48, 498, '2021-10-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(964, 48, 499, '2021-11-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(965, 48, 499, '2021-11-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(966, 48, 500, '2021-12-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(967, 48, 500, '2021-12-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(968, 48, 501, '2022-01-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(969, 48, 501, '2022-01-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(970, 48, 502, '2022-02-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(971, 48, 502, '2022-02-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(972, 48, 503, '2022-03-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(973, 48, 503, '2022-03-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(974, 48, 504, '2022-04-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(975, 48, 504, '2022-04-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(976, 48, 505, '2022-05-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(977, 48, 505, '2022-05-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(978, 48, 506, '2022-06-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(979, 48, 506, '2022-06-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(980, 48, 507, '2022-07-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(981, 48, 507, '2022-07-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(982, 48, 508, '2022-08-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(983, 48, 508, '2022-08-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(984, 48, 509, '2022-09-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(985, 48, 509, '2022-09-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(986, 48, 510, '2022-10-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(987, 48, 510, '2022-10-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(988, 48, 511, '2022-11-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(989, 48, 511, '2022-11-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(990, 48, 512, '2022-12-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(991, 48, 512, '2022-12-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(992, 48, 513, '2023-01-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(993, 48, 513, '2023-01-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(994, 48, 514, '2023-02-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(995, 48, 514, '2023-02-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(996, 48, 515, '2023-03-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(997, 48, 515, '2023-03-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(998, 48, 516, '2023-04-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(999, 48, 516, '2023-04-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(1000, 48, 517, '2023-05-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(1001, 48, 517, '2023-05-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(1002, 48, 518, '2023-06-01', 'Principal', '0', 833.33, '', '', '', '', 'Active', '', '', 0, 0),
+(1003, 48, 518, '2023-06-01', 'Interest', '0', 375.00, '', '', '', '', 'Active', '', '', 0, 0),
+(1004, 48, 489, '2020-12-01', 'Payment', '103', 600.00, 'VISA', '', '', 'a:5:{i:0;s:4:\"VISA\";i:1;s:9:\"Raj kiran\";i:2;s:16:\"1234567890123456\";i:3;s:7:\"2021-01\";i:4;s:3:\"159\";}', 'Active', '', '', 0, 0),
+(1005, 48, 0, '2020-12-01', 'Foreclosure', '104', 30624.00, 'VISA', '', '', 'a:5:{i:0;s:4:\"VISA\";i:1;s:3:\"Raj\";i:2;s:16:\"1234567890123456\";i:3;s:7:\"2021-01\";i:4;s:3:\"158\";}', 'Active', '', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1225,12 +1307,9 @@ CREATE TABLE `ltyp_loantypes` (
 --
 
 INSERT INTO `ltyp_loantypes` (`ltyp_id`, `ltyp_loantype`, `ltyp_icon`, `min_loanamt`, `max_loanamt`, `ltyp_maxmonth`, `ltyp_interestperc`, `ltyp_status`) VALUES
-(4, 'Personal Loan', '566243100Personal Loan.jpg', 10000, 300000, 24, 12.00, 'Active'),
-(5, 'Payday Loans', '781381647Payday Loans.jpg', 1000, 25000, 1, 30.00, 'Active'),
+(4, 'Personal Loan', '566243100Personal Loan.jpg', 10000, 300000, 24, 20.00, 'Active'),
 (6, 'Business loan', '26566business-loan-online.png', 15000, 1500000, 30, 18.00, 'Active'),
-(7, 'Home Loan', '989656651Home Loan.jpg', 150000, 1500000, 15, 16.00, 'Active'),
-(8, 'Education loan', '930332563Education loan.jpg', 100000, 1000000, 30, 14.00, 'Active'),
-(9, 'Vehicle Loan', '565063197vehicle loan.jpg', 50000, 5000000, 30, 15.00, 'Active');
+(7, 'Home Loan', '989656651Home Loan.jpg', 150000, 1500000, 15, 16.00, 'Active');
 
 -- --------------------------------------------------------
 
@@ -1254,11 +1333,13 @@ CREATE TABLE `usr_user` (
 --
 
 INSERT INTO `usr_user` (`usr_id`, `usr_name`, `usr_login_id`, `usr_password`, `usr_contact`, `usr_emailid`, `usr_note`, `usr_status`) VALUES
-(1, 'admin rajas', 'admin', 'admin', '78945612530', 'admin@gmail.com', 'Super Admin Record', 'Active'),
-(2, 'Akash kumar', 'akashkumar', 'akashkumar', '78945612531', 'rajajrajaj@gmail.com', 'New record', 'Active'),
-(4, 'Mahesh', 'mahesh', '123456789', '9874561230', 'mahesh@gmail.com', 'This is test record for user note', 'Active'),
-(6, 'Aravinda MV', 'karna', '123456789', '78945614230', 'raja@gmail.com', 'Hello raja', 'Active'),
-(7, 'Iliyas', 'iliyas', '123456789', '9874563321', 'iliyas@gmail.com', 'Iliyas Account', 'Active');
+(1, 'admin rajas', 'admin1', 'admin1', '78945612530', 'admin@gmail.com', 'Super Admin Record', 'Active'),
+(8, 'Gayathri', 'gayuk4504admin', 'gayathrir', '9876543098', 'gayuk4504admin@gmail.com ', '', 'Active'),
+(9, 'AKASH M', 'makash122003admin', 'akashm', '7654376543', 'makash122003admin@gmail.com', '', 'Active'),
+(10, 'Hemanth Kumar U', 'uhemanthadmin', 'hemanthu', '9870980980', 'u.hemanthadmin@gmail.com', '', 'Active'),
+(11, 'Bharanidharan G', 'mgdsbharani20admin', 'gayathrir', '9089786756', 'mgdsbharani20admin@gmail.com', '', 'Active'),
+(12, 'Harini P', 'harinipurushothadmin', 'harinip', '89253466787', 'harinipurushothadmin@gmail.com', '', 'Active'),
+(13, 'Arvind B', 'arvindsuja026admin', 'arvindb', '8967452310', 'arvindsuja026@gmail.com ', '', 'Active');
 
 --
 -- Indexes for dumped tables
@@ -1327,13 +1408,13 @@ ALTER TABLE `usr_user`
 -- AUTO_INCREMENT for table `creditscore`
 --
 ALTER TABLE `creditscore`
-  MODIFY `creditscore_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `creditscore_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `cst_customer`
 --
 ALTER TABLE `cst_customer`
-  MODIFY `cst_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `cst_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `dpmt_delaypayment`
@@ -1345,13 +1426,13 @@ ALTER TABLE `dpmt_delaypayment`
 -- AUTO_INCREMENT for table `lacc_loanaccount`
 --
 ALTER TABLE `lacc_loanaccount`
-  MODIFY `lacc_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `lacc_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `lins_loaninstallment`
 --
 ALTER TABLE `lins_loaninstallment`
-  MODIFY `lins_id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=489;
+  MODIFY `lins_id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=519;
 
 --
 -- AUTO_INCREMENT for table `lpf_loanprocessingfee`
@@ -1363,7 +1444,7 @@ ALTER TABLE `lpf_loanprocessingfee`
 -- AUTO_INCREMENT for table `ltr_loantransaction`
 --
 ALTER TABLE `ltr_loantransaction`
-  MODIFY `ltr_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=944;
+  MODIFY `ltr_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1006;
 
 --
 -- AUTO_INCREMENT for table `ltyp_loantypes`
@@ -1375,7 +1456,7 @@ ALTER TABLE `ltyp_loantypes`
 -- AUTO_INCREMENT for table `usr_user`
 --
 ALTER TABLE `usr_user`
-  MODIFY `usr_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `usr_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

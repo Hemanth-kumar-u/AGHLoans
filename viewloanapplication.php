@@ -110,6 +110,10 @@ if(isset($_SESSION['cst_id']))
 	echo "</td>";
 	}
 }
+echo "</td>
+						<td> <a href='editcustomerprofile1.php?editid=$rs[0]' class='btn btn-secondary' style='width:100%;' >Edit</a>
+						</td>
+					</tr>";
 /*						
 echo "<a href='viewloanapplication.php?delid=$rs[0]' class='btn btn-danger' onclick='return confirmdelete()' >Delete</a>";
 */

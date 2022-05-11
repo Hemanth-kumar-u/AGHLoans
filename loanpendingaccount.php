@@ -577,8 +577,9 @@ $rsedit = mysqli_fetch_array($qsqledit);
             </div>
     </p>
 <div class="read-icon">
-<div class="col-lg-6 col-md-6 mt-6" style="text-align: left"><a href="fun1.php" class="btn btn-danger">Reject Loan Application</a></div>					
-	<div class="col-lg-6 col-md-6 mt-6" style="text-align: right;"><a href="fun2.php"  class="btn btn-success">Approve Loan Application</a></div>
+<div class="col-lg-6 col-md-6 mt-6" style="text-align: left"><input type="submit" name="submitreject" id="submitreject" class="btn read" value="Reject Loan Application"></a></div>					
+<div class="col-lg-6 col-md-6 mt-6" style="text-align: left"><input type="submit" name="submitreject" id="submitreject" class="btn read" value="Reject Loan Application"></a></div>					
+	
 </div>
                         </div>
                     </div>

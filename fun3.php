@@ -1,11 +1,10 @@
-
 <?php
-$txt_file=fopen('file1.txt','r');
+$txt_file=fopen('file3.txt','r');
 $a=1;
 $line=fgets($txt_file);
 $to_email =$line; 
-$subject = "Your Application has been Rejected ";
-$body = "Dear Customer, Your Application has been Rejected , Kindly visit the website for more updates . Thanking your. Regards AGH Teams ";
+$subject = "Your Loan Application has been modified ";
+$body = "Dear Customer, Your Loan Application has been modified . Kindly check the website for further details.Thanking you , Regards AGH Team ";
 $headers = "From: aghloansandservices@gmail.com";
 if(mail($to_email, $subject, $body, $headers)) 
 { 
@@ -19,4 +18,3 @@ echo "Email sending failed...";
 } 
 
 ?>
-
